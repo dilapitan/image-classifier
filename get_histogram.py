@@ -1,10 +1,12 @@
+# program for getting the histogram of images on a folder
+
 import cv2 as cv
 import glob
 
-subfolder = "Cajanus sp" # subject to change
-directory = "pollimac_photos/" + subfolder
+subfolder = "Solanum melongena" # subject to change
+directory = "test_photos/" + subfolder
 
-images = glob.glob(directory + "/*.jpg") # 'reads' all jpg files
+images = glob.glob(directory + "/*.png") # 'reads' all jpg files
 images = sorted(images) # sort images
 
 file = open("histograms.txt", "w") 
