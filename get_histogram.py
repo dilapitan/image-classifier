@@ -1,7 +1,7 @@
 import cv2 as cv
 import glob
 
-subfolder = "Zea mays" # subject to change
+subfolder = "Cajanus sp" # subject to change
 directory = "pollimac_photos/" + subfolder
 
 images = glob.glob(directory + "/*.jpg") # 'reads' all jpg files
@@ -29,6 +29,8 @@ for image in images:
 	# counter for histogram
 	print(count_hist)
 	count_hist += 1
+
+	break
 
 # writing all histograms of an images to file 
 file.write(str(all_hist)) # converts array(histograms) to string
